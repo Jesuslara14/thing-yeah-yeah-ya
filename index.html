@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Service</title>
+    <style>
+        nav{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+        }
+
+        form{
+            background-color: lime;
+            width: 50%;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        #head{
+            padding: 20px;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        .navItem{
+            color: white;
+            width: auto;
+        }
+
+        .navItem:hover{
+            background-color: lightgreen;
+            color: black;
+        }
+
+        .navItem:active{
+            opacity: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="head" class="green">
+        <h1>Astana Delivery Service</h1>
+        <nav><div class="navItem">Home</div><div class="navItem">Delivery</div><div class="navItem">This is not an option</div></nav>
+    </div>
+
+    <form>
+        <h2>Place an order</h2>
+        <fieldset>
+            <legend>User Information</legend>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" pattern="[A-z]{1,}" required>
+            <br>
+            <br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" pattern="[A-z]{1,}" required>
+            <br>
+            <br>
+            <label for="email">E-Mail</label>
+            <input type="email" placeholder="john-doe@gmail.com" id="email" required>
+            <br>
+            <br>
+            <label for="tel">Phone Number</label>
+            <input type="tel" placeholder="XXXX-XXX-XX-XX" id="tel" pattern="^[2-9]\d{3}-\d{2}-\d{2}$" required>
+        </fieldset>
+        <fieldset>
+            <legend>Delivery Address</legend>
+            <label for="address">Address</label>
+            <input type="address" pattern="^">
+            <br>
+            <br>
+            <label for="country">Country</label>
+            <select id="country">
+                <option value="kazakhstan">Kazakhstan</option>
+                <option value="turkmenistan">Turkmenistan</option>
+                <option value="kyrgyztan">Kyrgyztan</option>
+                <option value="tajikistan">Tajikistan</option>
+            </select>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
